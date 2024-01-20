@@ -1,3 +1,5 @@
+"use strict" // treat all JS code as newer version of JavaScript
+
 // There are 6 types of Data Types in Java Script
 
 // Shorthand - nn bb ss u
