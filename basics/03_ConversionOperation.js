@@ -71,17 +71,7 @@ console.log(5 + 3 + "2")  // when string is at last then starting value perforn 
 // assign **= 5
 // console.log(assign)
 
-// // Comparison Operators
-// let comp1 = 10;
-// let comp2 = 8;
-// console.log("comp1 == comp2 is", comp1 == comp2)
-// console.log("comp1 != comp2 is", comp1 != comp2)
-// console.log("comp1 === comp2 is", comp1 === comp2) // equal value and type
-// console.log("comp1 !== comp2 is", comp1 !== comp2) // not equal value and type
-// console.log("comp1 > comp2 is", comp1 > comp2)
-// console.log("comp1 < comp2 is", comp1 < comp2)
-// console.log("comp1 >= comp2 is", comp1 >= comp2)
-// console.log("comp1 <= comp2 is", comp1 <= comp2)
+
 
 // //Logical Operators
 // let x = 5;
