@@ -18,7 +18,7 @@ const regularUser = {
         }
     }
 }
-console.log(regularUser.fullName.userFullName.firstName);
+//console.log(regularUser.fullName.userFullName.firstName);
 
 // merging of objects
 
@@ -40,7 +40,7 @@ let obj = Object.assign({}, obj1, obj2, obj3)
 // another way of merging
 
 let newObj = {...obj1, ...obj2, ...obj3}
-console.log(newObj)
+//console.log(newObj)
 
 // Array objects
 
@@ -57,13 +57,27 @@ let user = [
 console.log(user[1].name);
 
 user.map((element) => {
-    console.log(element.name);
+    //console.log(element.name);
 });
 
 
 user.forEach((element) => {
-    console.log(element.name);
+    //console.log(element.name);
 });
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
+// Destructuring of objects
+
+const course = {
+    name : 'JS in hindi',
+    price : 999,
+    courseInstructor : "Hitesh"
+}
+const {courseInstructor : instructor} = course;
+
+console.log(instructor)
