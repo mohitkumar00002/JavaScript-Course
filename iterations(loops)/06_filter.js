@@ -8,7 +8,7 @@ console.log(myNum)  //shows undefined bcoz forEach not return any value
 let newNum = number.map((item) => {
    return item
 })
-console.log(newNum)
+//console.log(newNum)
 
 // filter
 
@@ -16,7 +16,8 @@ let arr = [32, 54, 65, 23, 23, 76, 66, 43, 50];
 let newArr = arr.filter((num)=>{
    return num < 70 && num > 50
 })
-console.log(newArr)
+console.log(newArr);
+
 
 // Array Objects
 const books = [
