@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li><img src="https://t3.ftcdn.net/jpg/04/56/91/60/360_F_456916020_uY7yLop2BIvhS4EuT5pEb6JzcXAeB0XN.jpg" width="200px" id="tajmahal" alt=""></li>
+        <li><img src="https://www.holidify.com/images/cmsuploads/compressed/Chembra-Peak-Wayanad_20180119201400.png" width="200px" id="nature" alt=""></li>
+        <li><img src="https://media.istockphoto.com/id/866765052/photo/domesticsilence.jpg?s=612x612&w=0&k=20&c=vZ6rQ1EbIhI262FKlxBoozwF4szwJCCypkmB5Lm6VeA=" width="200px" id="rose" alt=""></li>
+        <li><img src="https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg" width="200px" id="tiger" alt=""></li>
+        <li><img src="https://static.sadhguru.org/d/46272/1633487538-1633487537509.jpg" width="200px" id="shiv" alt=""></li>
+        <li><a style="color: aliceblue;" id="google" target="_blank" href="http://www.google.com">Google</a></li>
+    </ul>
+    <script>
+        // wrong way - bcoz it provides less features
+        // document.getElementById('nature').onclick = ((e)=>{
+        //     alert("Nature is clicked")
+        // })
+
+        //attachEvent()
+        // jQuery - on
+        
+        /*
+        Event Propogation 
+        Bubbling - track inside to outside
+        false -  by default
+        
+        Capturing Mode - track outside to inside
+        true
+
+        stopPropogation() - used to stop propogation
+        */
+
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log("Clicked inside the ul")
+        // },false) 
+        // document.getElementById("nature").addEventListener('click', function(e){
+        //     console.log('Nature is clicked')
+        //     e.stopPropagation()
+        // }, false) 
+        
+    // preventDefault
+    document.getElementById('google').addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("Google is clicked")
+    })
+
+    // target - gives target from where the event is generated
+    document.querySelector('#images').addEventListener('click', function(e){
+            console.log(e.target.parentNode)
+            console.log(e.target.tagName)
+            if(e.target.tagName === 'IMG'){
+                let removeLi = e.target.parentNode;
+            removeLi.remove()
+            }
+            
+    })
+        // type, timeStamp, preventDefault, tagName
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY,
+        //altKey, ctrlKey, shiftKey, keyCode
+    </script>
+</body>
+</html>
