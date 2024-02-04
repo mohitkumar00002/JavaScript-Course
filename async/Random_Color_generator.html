@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Random Color</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h1>Start should change the Background Color every second</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+    <script>
+      const randomColor = function () {
+        const hex = "012345678ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 10)];
+        }
+        return color;
+      };
+      //console.log(randomColor());
+      let intervalId;
+      const startChangingColor = function () {
+        if (!intervalId) {
+          intervalId = setInterval(() => {
+               document.body.style.backgroundColor = randomColor();
+          }, 1000);
+        }
+      };
+      const stopChangingColor = function () {
+        clearInterval(intervalId);
+        intervalId = null;
+      };
+
+      document
+        .getElementById("Start")
+        .addEventListener("click", startChangingColor);
+      document
+        .getElementById("Stop")
+        .addEventListener("click", stopChangingColor);
+    </script>
+  </body>
+</html>

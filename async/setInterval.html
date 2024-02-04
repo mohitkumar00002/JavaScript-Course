@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+    <script>sayName
+    // setInterval supports third variable
+    let sayName;
+    
+    const printName = function(str){
+        console.log(str, Date.now())
+    }
+    
+    //clearInterval(sayName)
+    document.getElementById('start').addEventListener('click', function(){
+        if(!sayName){
+            sayName = setInterval(printName, 2000, "Mohit")
+        }
+    })
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval()
+        sayName = undefined;
+    })
+    // let sayName;
+    // let printName = function(str){
+    //     console.log(str, Date.now())
+    // }
+    
+
+    // const startPrinting = function(){
+    //     sayName = setInterval(printName, 2000, "Mohit")
+    // };
+    // const stopPrinting = function(){
+    //     clearInterval(sayName);
+    //     sayName = null;
+    // };
+     
+    // document.getElementById('start').addEventListener('click', startPrinting)
+    // document.getElementById('stop').addEventListener('click', stopPrinting);
+
+
+    </script>
+</body>
+</html>

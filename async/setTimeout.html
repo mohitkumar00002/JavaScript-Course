@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+    <script>
+        // setTimeout
+        setTimeout(() => {
+            console.log("Hitesh")
+        }, 3000);
+
+        // by function reference
+        const printMohit = function(){
+            console.log("Mohit")
+        }
+        setTimeout(printMohit, 2000);
+
+        const changeText = setTimeout(() => {
+           document.querySelector('h1').innerHTML = "Asynchronous programming"
+        }, 2000);
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(changeText);
+            console.log('Stopped')
+        })
+
+
+    </script>
+</body>
+</html>
