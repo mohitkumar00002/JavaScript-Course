@@ -64,7 +64,7 @@ const promiseFive = new Promise((resolve, reject) => {
             resolve({ username: "JavaScript", password: "js123" })
         }
         else {
-            reject("JS went wrong")
+            reject("JS went wrong");
         }
     }, 5000);
 });
